@@ -9,3 +9,7 @@ div.content{
 	font-weight: bolder; /*Dinh dang do day*/
 	font-size: 200%;
 }
+
+strong.tho{
+	 color: #ff9245; /*Mau do*/
+}
