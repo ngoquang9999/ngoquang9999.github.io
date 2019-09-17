@@ -1,0 +1,10 @@
+<vaadin-tabs slot="menu">
+    <vaadin-tab theme="icon-on-top">
+      <iron-icon icon="vaadin:home"></iron-icon>
+      Page 1
+    </vaadin-tab>
+    <vaadin-tab theme="icon-on-top">
+      <iron-icon icon="vaadin:list"></iron-icon>
+      Page 2
+    </vaadin-tab>
+</vaadin-tabs>
