@@ -1,0 +1,171 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Tahoma, sans-serif , Times New Roman;
+}
+
+/* Phan menu chinh */
+body{
+	background-repeat: no-repeat;
+	background-position: center center;
+  background-attachment: fixed;
+}
+h1#title{
+	text-align: center;
+	color: rgb(185, 255, 255);
+	border-radius: 10px;
+	font-size: 40px;
+	background-color: rgba(0,0,0, 0.5);
+	margin: 20px 100px;  /* Can le khung p.t2 (20px la tren duoi, 100px la trai phai) */
+}
+#container {
+    width: 60%;
+    height: 60px;
+    background-color: #dadada;
+    margin: auto;
+}
+#content {
+    height: 60px;
+    border-left: 8px solid rgb(39, 129, 255);
+    border-bottom: 2px solid rgb(39, 53, 255);
+	
+}
+#content >ul> li{
+    position: relative;
+    float: left;
+    list-style-type: none;
+    padding : 20px;
+	color: rgb(85, 205, 255);
+}
+#content >ul >li >a {
+    color: black;
+    margin-left: 15px;
+    font-weight: bold;
+}
+#content >ul >li:hover >a {
+    color: white;
+    cursor: pointer;
+}
+#content > ul > li:hover {
+    background-color: rgb(85, 205, 255);
+}
+@keyframes showSub_menu {
+    50% {
+        margin-top: 2px;
+    }
+}
+#content > ul > li:hover #sub_list {
+    display: block;
+    background-color: #dadada;
+	 animation-name: showSub_menu;
+    animation-duration: 1s;
+}
+#content ul #sub_list {
+    background-color: #dadada;
+    position: absolute;
+    width: 180px;
+    height: 235px;
+    margin-top: 21px;
+    margin-left: -20px;
+    display:none;
+}
+#content ul #sub_list .sub_menu {
+    padding-top: 5px;
+    height: 40px;
+    width: 180px;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+    border-top: 1px solid black;
+}
+
+#content ul #sub_list .sub_menu  a{
+    margin-left: 30px;
+
+}
+#content ul #sub_list .sub_menu:hover {
+    background-color: rgb(85, 205, 255);
+}
+#content ul #sub_list .sub_menu:hover  a {
+    color:white;
+}
+
+
+/* Phan menu bai tap */
+div#menuexcersice{
+	padding: 20px 50px;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #dadada;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: white;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: rgb(120, 208, 234);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;  /* đây là chỗ hiển thị hoặc ẩn nội dung */
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  margin: 18px 12px;
+  border-top: none;
+  background-color: rgb(240, 240, 240);
+}
+
+/* Nút Download */
+a.download{
+	background-color: rgb(97, 185, 255);
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Nội dung yêu cầu */
+div#Requiments{
+	font-family: Times New Roman;
+	text-align: left;
+	font-size: 20px;
+	color: rgb(25, 107, 255); 
+	margin: 20px 10px;
+}
+
+
+/* Các tiêu đề trong tab design */
+h4.design{
+	font-family: Times New Roman;
+	text-align: left;
+	font-size: 40px;
+	color: rgb(25, 107, 255); 
+	margin: 20px 10px;
+}
+
+
+
+
+
+
+
+

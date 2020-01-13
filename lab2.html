@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css"> 
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+  <style>
+    
+    header#tab {
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+
+.topnav a {
+float: left;
+color: #adadad;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topnav a.active {
+background-color: rgb(0, 0, 0);
+color: white;
+}
+
+table, tr, th{
+      border: 1px solid black;
+      border-color: black;
+      text-align: center;
+    }
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      height: 300px; /* only for demonstration, should be removed */
+    }
+</style>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="lab1.html" class="nav-link">Lab 1</a></li>
+	        	<li class="nav-item active"><a href="lab2.html" class="nav-link">Lab 2</a></li>
+	        	<li class="nav-item"><a href="lab3.html" class="nav-link">Lab 3</a></li>
+            <li class="nav-item"><a href="lab4.html" class="nav-link">Lab 4</a></li>
+            <li class="nav-item"><a href="result.html" class="nav-link">Result</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url(&quot;images/bg_1.jpg&quot;); background-position: 50% 0%;" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center fadeInUp ftco-animated">
+              <h1 class="mb-2 bread">Ngô Minh Quang</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+		
+      <div class="page_info">
+        <div class="container">
+            <br/>
+          <!-- Nav pills -->
+          <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#home" style="font-weight: bold;">Requirement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu0" style="font-weight: bold;">User Scenario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu1" style="font-weight: bold;">Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu2" style="font-weight: bold;">Implementation</a>
+            </li>
+          </ul>
+          <hr>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="home" class="container tab-pane active">
+              <div style="font-size:15px;font-family:Tahoma;font-weight: bold;">Yêu cầu:</div> <p>(1) Tạo ra một user scenario.
+                <br/> (2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện
+                Web trên công cụ thiết kế đã chọn. Sau đó tạo ra file html tương
+                ứng cho thiết kế này.
+                <br/> Upload lên Azure / Github: trong file html có chèn hình ảnh của
+                user scenario ở (1) và đường dẫn của file thiết kế ở (2).</p>
+            </div>
+            <div id="menu0" class="container tab-pane fade text-center">
+              <img src="images/lab2_Scenario.png" width="800px" height="400px"/>
+            </div>
+            <div id="menu1" class="container tab-pane fade">
+              <div class="row">
+                <div class="col-sm-6">
+                    <p style="font-size: 15px;padding: 20px 0px 0px; float: left;">Sketch:</p>
+                    <a href="images\lab2_paper.jpg" download><button type="button" class="btn btn-outline-info btn-sm" style="margin: 3% 0%;float: right;"><i class='fas fa-download'></i>&nbsp;&nbsp;Download</button></a>
+                    <img src="images\lab2_paper.jpg" width="100%" height="83%"><br/>
+                </div>
+                <div class="col-sm-6">
+                        <p style="font-size: 15px;margin: 20px 0px; float:left">Design:</p>
+                        <a href="17130179_design\lab2.fig"><button type="button" class="btn btn-outline-info btn-sm" style="margin: 3% 0%;float: right;"><i class='fas fa-download'></i>&nbsp;&nbsp;Download</button></a>
+                        <br/><br/>
+                  <img src="images\lab2_hinhfigma.png" width="100%"><br/>
+                </div>
+              </div>
+              <hr/>
+        <div style="text-align: center">
+                <div id="col1">
+                <div id="col2">
+                  <a href="data_lab2.rar"><button type="button" class="btn btn-primary btn-sm" style="font-size: 155%;padding: 1% 2%;text-align: center;"><i class='fas fa-download'></i>&nbsp;&nbsp;Download All</button></a>  </div>
+              </div>
+  </div>
+            </div>
+            <div id="menu2" class="container tab-pane fade">
+              <div id="page" style="padding: 30px;">
+                <img src="sources\lab2\images\header.PNG" width="100%">
+              <div id="tab1" style="text-align: right;">
+                <div id="tab1right" style="padding: 0px 20px;">
+                  <p><a href="#" style="color: black;"><u>Chào Ngô Quang</u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: black;"><u>Đăng xuất</u></a></p>
+                </div>
+              </div>
+              <nav class="navbar navbar-expand-sm bg-light">
+                <ul class="navbar-nav" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">Tin tức</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">Thời KB</a>
+                  </li>
+                  <li class="nav-item" style="background-color: rgb(77, 79, 214);">
+                    <a class="nav-link" href="#" style="color: white;">Xem điểm</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">Xem lịch thi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">Sửa TT tài khoản</a>
+                  </li>
+                </ul>
+              </nav>
+              <section id="center" style="height: 500px">
+              
+                <nav id="center_left" style="width:220px;height:502px; float: left;">
+                  <p style="
+                  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(182, 242, 255, 0) 0.01%, #9EB6F3 100%);
+                  border: 1px solid #C1C1C1;
+                  box-sizing: border-box;
+                  height: 502px;
+                  width: 222px;
+                  "><br/>&nbsp;&nbsp;&nbsp;Chọn học kỳ:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#" style="color: black">Học kỳ I</a><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#" style="color: red">Học kỳ II</a><br/><br/></p>
+                </nav>
+                
+                <article style="float: left;" class="text-center">
+                    <p style="font-size:20px;">BẢNG ĐIỂM</p>
+                    <table style="width:100%">
+                        <tr style="font-size:15px;color:white;background-color: rgb(0, 0, 255);">
+                          <th>Môn</th>
+                          <th>M</th>
+                        <th>KTDX</th>
+                          <th>15'</th>
+                        <th>1 tiết</th>
+                        <th>Thi</th>
+                        <th>Tổng kết</th>
+                        </tr>
+                        <tr>
+                            <th>Toán</th>
+                            <th>10</th>
+                          <th>8</th>
+                            <th>7</th>
+                          <th>10</th>
+                          <th>9</th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                            <th>Vật Lý</th>
+                            <th>0</th>
+                          <th>2</th>
+                            <th>10</th>
+                          <th>6</th>
+                          <th>5</th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                            <th>Hóa Học</th>
+                            <th></th>
+                          <th>9</th>
+                            <th>10</th>
+                          <th>8</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                            <th>Sinh Học</th>
+                            <th>9</th>
+                          <th>10</th>
+                            <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                            <th>Ngữ Văn</th>
+                            <th>7</th>
+                          <th>7</th>
+                            <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                            <th>Lịch Sử</th>
+                            <th></th>
+                          <th></th>
+                            <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </table>
+                      <br/>
+                      <p style="text-align: center"><a href="#" style="color: black;"><u>In bảng điểm</u></a></p>
+                </article>
+               
+              </section>
+              </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+    <br/>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-0">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2 logo">Quotations</h2>
+              <p>Everything in this world we do not need to know, just heaven knows, the earth knows.</p>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">152 Ấp Chánh, Đức Lập Thượng, Đức Hoà, Long An</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">(+84) 982 642 951</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">ngominhquang9999@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+
+	            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.google.com"><span class="icon-google"></span></a></li>
+                <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.facebook.com/minhquang.ngo.9809"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.youtube.com"><span class="icon-youtube"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="result.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Result</a></li>
+                <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+                <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+              </ul>
+            </div>
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Exercises</h2>
+              <ul class="list-unstyled">
+                <li><a href="lab1.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Lab 1</a></li>
+                <li><a href="lab2.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Lab 2</a></li>
+                <li><a href="lab3.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Lab 3</a></li>
+                <li><a href="lab4.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Lab 4</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">My news</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(img/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Vietnam received goals early in the year</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Jan. 20, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Student</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 39</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-5 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(img/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Master Nguyen Thi Bach Phuong retired</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Sept. 11, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Teacher</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 77</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+          	<div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Opening Hours</h2>
+            	<h3 class="open-hours pl-4"><span class="ion-ios-time mr-3"></span>I always open 24/24</h3>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Subscribe Me!</h2>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">NgoMinhQuang</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css"> 
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <style>
+        header#tab {
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+}
+.navbar {
+overflow: hidden;
+background-color: #333;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+float: left;
+font-size: 16px;
+color:  rgb(160, 160, 160);
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+cursor: pointer;
+font-size: 16px;  
+border: none;
+outline: none;
+color:  rgb(160, 160, 160);
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+background-color: green;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+.show {
+display: block;
+}
+  </style>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+        </script>
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="lab1.html" class="nav-link">Lab 1</a></li>
+	        	<li class="nav-item"><a href="lab2.html" class="nav-link">Lab 2</a></li>
+	        	<li class="nav-item"><a href="lab3.html" class="nav-link">Lab 3</a></li>
+            <li class="nav-item active"><a href="lab4.html" class="nav-link">Lab 4</a></li>
+            <li class="nav-item"><a href="result.html" class="nav-link">Result</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url(&quot;images/bg_1.jpg&quot;); background-position: 50% 0%;" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center fadeInUp ftco-animated">
+              <h1 class="mb-2 bread">Ngô Minh Quang</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+		
+	
+      <div class="page_info">
+        <div class="container">
+            <br/>
+          <!-- Nav pills -->
+          <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#home" style="font-weight: bold; ">Requirement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu1" style="font-weight: bold;">Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu2" style="font-weight: bold;">Implementation</a>
+            </li>
+          </ul>
+          <hr>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="home" class="container tab-pane active">
+              <p><div style="font-size:15px;font-family:Tahoma;font-weight: bold;">Yêu cầu:</div>Tạo một trang Web có nội dung bất kỳ, sử dụng linh hoạt tất cả
+                những phần sau: Input Controls, Navigation, Animations, Default
+                Settings, Guided Actions.
+                <br/>Có biểu mẫu liên hệ.</p>
+            </div>
+            <div id="menu1" class="container tab-pane fade">
+              <div class="row">
+                <div class="col-sm-6">
+                    <p style="font-size: 15px;padding: 20px 0px 0px; float: left;">Sketch:</p>
+                    <a href="images\lab4_paper.jpg" download><button type="button" class="btn btn-outline-info btn-sm" style="margin: 3% 0%;float: right;"><i class='fas fa-download'></i>&nbsp;&nbsp;Download</button></a>
+                    <img src="images\lab4_paper.jpg" width="100%"><br/>
+                </div>
+                <div class="col-sm-6">
+                        <p style="font-size: 15px;margin: 20px 0px; float:left">Design:</p>
+                        <a href="17130179_design\lab4.fig"><button type="button" class="btn btn-outline-info btn-sm" style="margin: 3% 0%;float: right;"><i class='fas fa-download'></i>&nbsp;&nbsp;Download</button></a>
+                        <br/><br/>
+                  <img src="images\lab4_hinhfigma.png" width="100%"><br/>
+                </div>
+              </div>
+              <hr/>
+        <div style="text-align: center">
+                <div id="col1">
+                <div id="col2">
+                  <a href="data_lab4.zip"><button type="button" class="btn btn-primary btn-sm" style="font-size: 155%;padding: 1% 2%;text-align: center;"><i class='fas fa-download'></i>&nbsp;&nbsp;Download All</button></a>  </div>
+              </div>
+  </div> <br>
+            </div>
+            <div id="menu2" class="container tab-pane fade">
+                <br/>
+            
+                <div id="headerimp" style="background-color: black;position: relative;">
+                  <p style="font-size: 200%;font-family: Times New Roman;color: white;"><img src="sources\lab4\images\logo.png" style="width: 12%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Green Agriculture</p>
+                  <div style="position: absolute;
+                  bottom: 9%;
+                  right: 0%;width: 110%;">
+                  <div class="row" style="color: white;">
+                      <div class="col-sm-7"></div>
+                      <div class="col-sm-1">
+                         <a href="#" style="color: white;"><p>Contact</p></a>
+                      </div>
+                      <div class="col-sm-1">
+                             <a href="#" style="color: white;"><p>Sign up</p></a>
+                         </div>
+                         <div class="col-sm-1">
+                                 <a href="#" style="color: white;"><p>Sign in</p></a>
+                             </div>
+                             <div class="col-sm-2">
+                                     <button type="button" class="btn btn-warning" style="color:black;font-weight: bold;">Download News</button>
+                                 </div>
+                                 
+                  </div>
+                 </div>
+                 </div>
+                 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                   
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                      </li>
+                      <!-- Dropdown -->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                          Domestic
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Type 1</a>
+                          <a class="dropdown-item" href="#">Type 2</a>
+                          <a class="dropdown-item" href="#">Type 3</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+                          Foreign
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Type 1</a>
+                          <a class="dropdown-item" href="#">Type 2</a>
+                          <a class="dropdown-item" href="#">Type 3</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Shared corner</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div style="width: 100%; height: 100%;background-color: rgb(49, 15, 15);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <br/>
+                                <p style="color: rgb(148, 148, 148);margin-left: 10%;">Home / Domestic / Fruits News</p>
+                            </div>
+                            <div class="col-sm-4">
+
+                            </div>
+                            <div class="col-sm-4">
+                               
+                            </div>
+                        </div>
+                    </div>
+                 <div id="demo" class="carousel slide" data-ride="carousel" style="width: 60%;height: 100%;margin: 10px auto;">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="sources\lab4\images\oi.jpg" alt="Los Angeles" width="100%" height="80%">
+                        <div class="carousel-caption">
+                            <h3><p style="color:white">Protect your fruits may you unknow</p></h3>
+                            <p>In crop production, choosing a healthy plant for the sweet fruit season has been a marvelous process for growers. However, at present, some export fruits of Vietnam are being damaged by the fungus and bacteria, which significantly reduce the commercial value and fruit quality.</p>
+                          </div>   
+                      </div>
+                      <div class="carousel-item">
+                        <img src="sources\lab4\images\mit.jpg" alt="Chicago"  width="100%" height="80%">
+                        <div class="carousel-caption">
+                        <h3><p style="color:white">15 benefits of jackfruit you did not expect</p></h3>
+                        <p>Jackfruit not only appeals to people eating with a juicy taste. Benefits of jackfruit bring equally equally attractive as you eat it.</p>
+                      </div></div>
+                      <div class="carousel-item">
+                        <img src="sources\lab4\images\thanhlong.jpg" alt="New York"  width="100%" height="80%">
+                        <div class="carousel-caption">
+                        <h3><p style="color:white">These people eat dragon fruit extremely dangerous, need to know that to avoid</p></h3>
+                        <p>Dragon fruit has the effect of reducing blood pressure, reducing blood fat, laxative, detoxifying, bright eyes ... Although this fruit has many good uses for health, but not everyone 'fits' to eat the dragon.</p>
+                      </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                  </div>
+                  </div>
+                 <div class="row">
+                    
+                     <div class="col-sm-10">
+                               <div>
+                             <div style="margin:4%">
+                         <img src="sources\lab4\images\saurieng.jpg" style="float:left;width: 30%;"></div>
+                         <div style="margin: 1%;">
+                         <a href="#"><p style="font-size: 20px;font-family: Times New Roman; font-weight: bold;color: black;">Durian fruit worth 1.1 bilions, with money is unlikely to have been eaten</p></a>
+                         <p>At the durian auction in Thailand, this particular durian set a world record for $ 48,000 (over 1.1 billion).</p></div>
+                         </div>
+                         <br/>
+
+                         <div>
+                                 <div style="margin:4%">
+                             <img src="sources\lab4\images\mangcut.jpg" style="float:left;width: 30%;"></div>
+                             <div style="margin: 1%;">
+                                <a href="#"><p style="font-size: 20px;font-family: Times New Roman; font-weight: bold;color: black;">Caution: the side effects when eating mangosteen</p></a>
+                             <p>Mangosteen is a popular fruit in Vietnam. There are many healthy nutrients, however, one should not eat too much mangosteen at once.</p></div>
+                             </div>
+                             <br/>
+                               <div>
+                                     <div style="margin:4%">
+                                 <img src="sources\lab4\images\xoai.jpg" style="float:left;width: 30%;"></div>
+                                 <div style="margin: 1%;">
+                                    <a href="#"><p style="font-size: 20px;font-family: Times New Roman; font-weight: bold;color: black;"> Mango planting and care process</p></a>
+                                 <p>Mangoes are easy to grow, however, to take care of them properly and bring high yields, perhaps many people still do not know. Today, we would like to introduce to you the process of planting and tending mango trees with high efficiency.</p></div>
+                                 </div>
+                                 <br/>
+                                  <div>
+                                        
+                                    <a href="#"><p style="font-size: 20px;font-family: Times New Roman;color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read more...</p></a>
+                                     </div>
+                                     
+                                     <p style="font-size: 240%;font-weight: 500;margin: 2% 4%;">Help us have more great ideas</p>
+
+                                     <div style="margin: 3% 4%;">
+                                       <p style="float: left;">Your name: </p>
+                                      <input style="float: left;width: 80%;margin: 0% 1%;" placeholder="Nguyen Van A" autofocus>
+                                      <p style="color:#e54e53; float:left">*</p>
+                                       
+                                   </div>
+                                   <br/>
+                                   <div style="margin: 3% 4%;">
+                                     <p style="float: left;">Your email: </p>
+                                     <input style="float: left;width: 80%;margin: 0% 1%;" placeholder="example@gmail.com">
+                                   
+                                      
+                                  </div>
+                                  <br/>
+                                  <div style="margin: 3% 4%;">
+                                   <p style="float: left;">Your <br/>content: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                   <textarea class="form-control" rows="4" id="comment" style="float: left;width: 80%;"></textarea>
+                                   <p style="color:#e54e53; float:left">&nbsp;&nbsp;&nbsp;*</p>
+                                   
+                                 </div>
+                                 <br/><br/><br/> <br/><br/>
+                                 <button type="button" class="btn btn-outline-primary" style="float:right;margin-right: 13%;padding: 1% 8%;">Send</button>
+                                 <br><br>
+                     </div>
+                     <div class="col-sm-2"></div>
+                     
+
+                 </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <br/>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-0">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2 logo">Quotations</h2>
+              <p>Everything in this world we do not need to know, just heaven knows, the earth knows.</p>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">152 Ấp Chánh, Đức Lập Thượng, Đức Hoà, Long An</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">(+84) 982 642 951</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">ngominhquang9999@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+
+	            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.google.com"><span class="icon-google"></span></a></li>
+                <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.facebook.com/minhquang.ngo.9809"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.youtube.com"><span class="icon-youtube"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="result.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Result</a></li>
+                <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+                <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+              </ul>
+            </div>
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Exercises</h2>
+              <ul class="list-unstyled">
+                <li><a href="lab1.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Lab 1</a></li>
+                <li><a href="lab2.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Lab 2</a></li>
+                <li><a href="lab3.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Lab 3</a></li>
+                <li><a href="lab4.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Lab 4</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">My news</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(img/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Vietnam received goals early in the year</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Jan. 20, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Student</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 39</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-5 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(img/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Master Nguyen Thi Bach Phuong retired</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Sept. 11, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Teacher</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 77</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+          	<div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Opening Hours</h2>
+            	<h3 class="open-hours pl-4"><span class="ion-ios-time mr-3"></span>I always open 24/24</h3>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Subscribe Me!</h2>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">NgoMinhQuang</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
